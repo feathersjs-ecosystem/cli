@@ -57,7 +57,7 @@ npm start
 
 ## About
 
-Feathers CLI's generators are provided by [generator-feathers](https://github.com/feathersjs/generator-feathers), and its interactive command line is built on [Vorpal](http://vorpal.js.org/).
+Feathers CLI's generators are provided by [generator-feathers](https://github.com/feathersjs/generator-feathers), its interactive command line is built on [Vorpal](http://vorpal.js.org/).
 
 
 ## Changelog
