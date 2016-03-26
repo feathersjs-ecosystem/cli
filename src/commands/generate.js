@@ -2,11 +2,13 @@ import yeoman from 'yeoman-environment';
 
 const env = yeoman.createEnv();
 
-env.register(require.resolve('generator-feathers/generators/app'), 'feathers:app');
-env.register(require.resolve('generator-feathers/generators/hook'), 'feathers:hook');
-env.register(require.resolve('generator-feathers/generators/middleware'), 'feathers:middleware');
-env.register(require.resolve('generator-feathers/generators/model'), 'feathers:model');
-env.register(require.resolve('generator-feathers/generators/service'), 'feathers:service');
+const generators = 'generator-feathers/generators';
+
+env.register(require.resolve(`${generators}/app`), 'feathers:app');
+env.register(require.resolve(`${generators}/hook`), 'feathers:hook');
+env.register(require.resolve(`${generators}/middleware`), 'feathers:middleware');
+env.register(require.resolve(`${generators}/model`), 'feathers:model');
+env.register(require.resolve(`${generators}/service`), 'feathers:service');
 
 export default function(vorpal) {
   vorpal
