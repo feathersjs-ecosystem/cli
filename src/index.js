@@ -1,5 +1,4 @@
-import vorpalBuilder from 'vorpal';
-import generateCmd from './commands/generate';
+import vorpal from 'vorpal';
 
 export default function() {
   const vorpal = vorpalBuilder();
