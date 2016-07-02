@@ -1,84 +1,52 @@
-import yeoman from 'yeoman-environment';
+/*
+ * Generate things like apps, services,
+ * hooks, middleware, models, tests and filters.
+ */
 
-const env = yeoman.createEnv();
+// import generators from 'feathers-generator';
 
-const feathersGenerators = 'generator-feathers/generators';
-
-env.register(require.resolve(`${feathersGenerators}/app`), 'feathers:app');
-env.register(require.resolve(`${feathersGenerators}/hook`), 'feathers:hook');
-env.register(require.resolve(`${feathersGenerators}/middleware`), 'feathers:middleware');
-env.register(require.resolve(`${feathersGenerators}/model`), 'feathers:model');
-env.register(require.resolve(`${feathersGenerators}/service`), 'feathers:service');
-env.register(require.resolve('generator-feathers-plugin'), 'feathers:plugin');
-
-const generatorOptions = {
-  disableNotifyUpdate: true
-};
+const autocompletes = [
+  'app',
+  'filter',
+  'hook',
+  'middleware',
+  'model',
+  'secret',
+  'service',
+  'plugin'
+];
 
 export default function(vorpal) {
   vorpal
-    .command('g', 'alias for generate')
-    .autocomplete(['app', 'hook', 'middleware', 'model', 'service', 'plugin'])
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:app', generatorOptions, callback);
-    });
+    .command('generate [module] [name]', `Allows you to automatically generate a:
+      - app
+      - hook
+      - service
+      - filter
+      - model
+      - middleware
+      - plugin
 
-  vorpal
-    .command('generate ', 'alias for generate app')
-    .autocomplete(['app', 'hook', 'middleware', 'model', 'service', 'plugin'])
+      Defaults to an app when an argument isn't provided.`)
+    .alias('g')
+    .alias('-g')
+    .autocomplete(autocompletes)
+    // .help(function(args) {
+    //   // TODO (EK): Add more descriptive help
+    // })
     .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:app', generatorOptions, callback);
-    });
+      // TODO (EK): Check for args to see which type of generator we are going to call
+      // 1. look up generator
+      // 2. Read in existing config
+      // 3. Read in generator meta.json
+      // 4. Prompt user accordingly
+      // 5. Copy template files with answers
+      // 6. re-write existing config, package.json and feathers.json files
+      // 7. install npm modules
+      this.log();
 
-  vorpal
-    .command('generate app')
-    .description('generate new application')
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:app', generatorOptions, callback);
-    });
+      this.log('Running generator', args);
 
-  vorpal
-    .command('generate hook')
-    .description('generate new hook')
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:hook', generatorOptions, callback);
-    });
-
-  vorpal
-    .command('generate middleware')
-    .description('generate new middleware')
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:middleware', generatorOptions, callback);
-    });
-
-  vorpal
-    .command('generate model')
-    .description('generate new model')
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:model', generatorOptions, callback);
-    });
-
-  vorpal
-    .command('generate service')
-    .description('generate new service')
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:service', generatorOptions, callback);
-    });
-
-  vorpal
-    .command('generate plugin')
-    .description('generate new plugin')
-    .action(function (args, callback) {
-      this.log('');
-      env.run('feathers:plugin', generatorOptions, callback);
+      callback();
     });
 }
-
-export { env };
