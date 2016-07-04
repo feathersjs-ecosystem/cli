@@ -1,6 +1,6 @@
 import semver from 'semver';
 import { execSync } from 'child_process';
-import packageConfig from '../../package.json';
+import pkg from '../../package.json';
 
 // Parse version number from strings such as 'v4.2.0' or `>=4.0.0'
 export function parseVersionNumber(versionString) {
@@ -9,9 +9,9 @@ export function parseVersionNumber(versionString) {
 
 export default function(vorpal, args, done) {
   const chalk = vorpal.chalk;
-  const minNodeVersion = parseVersionNumber(packageConfig.engines.node);
+  const minNodeVersion = parseVersionNumber(pkg.engines.node);
   const currentNodeVersion = parseVersionNumber(process.version);
-  const minNpmVersion = parseVersionNumber(packageConfig.engines.npm);
+  const minNpmVersion = parseVersionNumber(pkg.engines.npm);
   let currentNpmVersion = 0;
 
   // try to detect npm version

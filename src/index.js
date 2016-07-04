@@ -1,4 +1,5 @@
 import vorpal from 'vorpal';
+import rootCheck from 'root-check';
 // import debug from './commands/debug';
 // import deploy from './commands/deploy';
 import doctor from './commands/doctor';
@@ -13,10 +14,31 @@ import checkForUpdates from './utils/check-for-updates';
 export default function() {
   const app = vorpal();
   const chalk = app.chalk;
+  let args = process.argv;
+
+  // Check to see if command was run as root and try to downgrade permissions.
+  // If that fails show an error and exit out. We don't want to create files as root.
+  rootCheck(`
+    ${chalk.red("Easy with the 'sudo'.")}
+    
+    Since feathers is a user command, there is no need to execute it with root permissions.
+    If you're having permission errors when using feathers without sudo, please spend a few
+    minutes learning more about how your system should work and make any necessary repairs.
+
+    Two quick solutions are to change where npm stores global packages by putting ~/npm/bin
+    in your PATH and running: ${chalk.bold('npm config set prefix ~/npm')} or simply using NVM to manage
+    your node environment. See https://github.com/creationix/nvm.
+  `);
 
   app.history('feathers');
   app.localStorage('feathers');
+
+  // TODO (EK): Add opt-in analytics reporting
+  // using GA + insight. Look at how yeoman does it
+  // https://github.com/yeoman/yo/blob/master/lib/cli.js#L172
   
+
+  // Register our commands with Vorpal
   // debug(app);
   // deploy(app);
   doctor(app);
@@ -25,8 +47,6 @@ export default function() {
   start(app);
   update(app);
   version(app);
-
-  let args = process.argv;
   
   // If verbose flag is passed, set it on the app
   // and remove it from the args.
@@ -35,8 +55,8 @@ export default function() {
     args.splice(args.indexOf('--verbose'));
   }
 
-  // Check for any updates first
-  checkForUpdates(app, args, function(error, data){
+  // Check to see if we are on the latest CLI version first
+  checkForUpdates(app, args).then(data => {
     if (data && data.outOfDate) {
       app.log(chalk.yellow('A newer version of feathers-cli is available.'));
       app.log();

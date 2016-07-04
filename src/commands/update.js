@@ -11,21 +11,22 @@ export default function(vorpal) {
   vorpal
     .command('update', 'Update feathers-cli')
     .alias('upgrade')
-    .action((args, callback) => {
-      checkForUpdates(vorpal, args, function(error, data){
-        if (data && data.outOfDate) {
+    .action(args => {
+      return checkForUpdates(vorpal, args)
+        .then(data => {
+          if (data && !data.outOfDate) {
+            vorpal.log(`You are already on the latest version.`);
+            vorpal.log();
+
+            return Promise.resolve();
+          }
+
           vorpal.log(`New version (${chalk.green(data.latestVersion)}) found!`);
-          updateCLI(vorpal, args, function(error, response){
-            if (!error) {
+
+          return updateCLI(vorpal, args)
+            .then(() => {
               process.exit(0);
-            }
-          });
-        }
-        else if (data) {
-          vorpal.log(`You are already on the latest version.`);
-          vorpal.log();
-          callback();
-        }
-      });
+            });
+        });
     });
 }

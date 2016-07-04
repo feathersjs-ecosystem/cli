@@ -22,7 +22,7 @@ const providers = [
       ##       ######## ##     ##    ##    ##     ## ######## ##     ##  ######
         `);
 
-        vorpal.log(`  Welcome to the Feathers command line.`);
+        vorpal.log(`  Welcome to the Feathers interactive shell.`);
         vorpal.log(`  Type ${chalk.bold("'exit'")} to quit, ${chalk.bold("'help'")} for a list of commands.`);
 
         vorpal
