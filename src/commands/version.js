@@ -3,17 +3,17 @@
  * Node + NPM versions meet the CLI requirements.
  */
 
-import getVersion from '../utils/get-cli-version';
+import pkg from '../../package.json';
 
-export default function(vorpal) {
-  vorpal
-    .command('version', 'get the feathers-cli version')
-    .alias('--version')
-    .alias('-v')
-    .action((args, callback) => {
-      getVersion(vorpal, args, function(error, version) {
-        vorpal.log(`Current Version: ${version}`);
-        vorpal.log();
-      });
-    });
+export default function(program) {
+  // Expose version.
+  program.version(pkg.version, '-v, --version');
+
+  // Make `-v` option case-insensitive.
+  process.argv = process.argv.map(arg => (arg === '-V') ? '-v' : arg);
+
+  program
+    .command('version')
+    .description('output the version')
+    .action(program.versionInformation);
 }

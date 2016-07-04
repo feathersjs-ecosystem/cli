@@ -1,20 +1,22 @@
-import vorpal from 'vorpal';
+import Debug from 'debug';
+import program from 'commander';
+import chalk from 'chalk';
 import rootCheck from 'root-check';
 // import debug from './commands/debug';
 // import deploy from './commands/deploy';
 import doctor from './commands/doctor';
 import generate from './commands/generate';
-import shell from './commands/shell';
+import help from './commands/help';
 import start from './commands/start';
 import update from './commands/update';
 import version from './commands/version';
-
 import checkForUpdates from './utils/check-for-updates';
 
+const debug = Debug('feathers-cli');
+
 export default function() {
-  const app = vorpal();
-  const chalk = app.chalk;
   let args = process.argv;
+  program.debug = debug;
 
   // Check to see if command was run as root and try to downgrade permissions.
   // If that fails show an error and exit out. We don't want to create files as root.
@@ -30,53 +32,41 @@ export default function() {
     your node environment. See https://github.com/creationix/nvm.
   `);
 
-  app.history('feathers');
-  app.localStorage('feathers');
-
   // TODO (EK): Add opt-in analytics reporting
   // using GA + insight. Look at how yeoman does it
   // https://github.com/yeoman/yo/blob/master/lib/cli.js#L172
   
 
   // Register our commands with Vorpal
-  // debug(app);
-  // deploy(app);
-  doctor(app);
-  generate(app);
-  shell(app);
-  start(app);
-  update(app);
-  version(app);
-  
-  // If verbose flag is passed, set it on the app
-  // and remove it from the args.
-  if (args.indexOf('--verbose') !== -1) {
-    app.verbose = true;
-    args.splice(args.indexOf('--verbose'));
-  }
+  // debug(program);
+  // deploy(program);
+  doctor(program);
+  generate(program);
+  help(program);
+  start(program);
+  update(program);
+  version(program);
 
   // Check to see if we are on the latest CLI version first
-  checkForUpdates(app, args).then(data => {
+  checkForUpdates.bind(program)(args).then(data => {
     if (data && data.outOfDate) {
-      app.log(chalk.yellow('A newer version of feathers-cli is available.'));
-      app.log();
-      app.log(`  latest:    ${chalk.green(data.latestVersion)}`);
-      app.log(`  installed: ${chalk.red(data.localVersion)}`);
-      app.log();
-      app.log(`You can update by running ${chalk.bold("'feathers update'")} or ${chalk.bold("'npm install -g feathers-cli'")}.`);
-      app.log();
+      console.log(chalk.yellow('A newer version of feathers-cli is available.'));
+      console.log();
+      console.log(`  latest:    ${chalk.green(data.latestVersion)}`);
+      console.log(`  installed: ${chalk.red(data.localVersion)}`);
+      console.log();
+      console.log(`You can update by running ${chalk.bold("'feathers update'")} or ${chalk.bold("'npm install -g feathers-cli'")}.`);
+      console.log();
     }
-    else if (data && app.verbose) {
-      app.log(`Current Version: ${data.localVersion} ${chalk.green('OK')}`);
-      app.log();
+    else if (data) {
+      program.debug(`Current Version: ${data.localVersion} ${chalk.green('OK')}`);
     }
 
-    // Run a command that was passed or show the help
-    if (args.length > 2) {
-      app.parse(args);
-    }
-    else {
-      app.execSync('help');
+    program.parse(args);
+    
+    // Show help if no other command was called
+    if (!program.args.length) {
+      program.help();
     }
   });
 }

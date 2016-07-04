@@ -4,10 +4,10 @@
  */
  import checkEnvironment from '../utils/check-environment';
 
- export default function(vorpal) {
-  vorpal
-    .command('doctor', 'Check your system for potential problems.')
-    .action((args, callback) => {
-      checkEnvironment(vorpal, args, callback);
-    });
+ export default function(program) {
+  program
+    .command('doctor')
+    .description('check your system for potential problems.')
+    .alias('dr')
+    .action(checkEnvironment.bind(program));
  }

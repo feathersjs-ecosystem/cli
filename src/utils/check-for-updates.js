@@ -1,11 +1,12 @@
 import request from 'request';
 import semver from 'semver';
+import chalk from 'chalk';
 import pkg from '../../package.json';
 
 const URL = 'https://registry.npmjs.org/feathers-cli'
 
-export default function(vorpal, args) {
-  const chalk = vorpal.chalk;
+export default function(args) {
+  const program = this;
 
   return new Promise((resolve, reject) => {
     // If they are using the update command then don't bother
@@ -14,9 +15,7 @@ export default function(vorpal, args) {
       return resolve();
     }
 
-    if (vorpal.verbose) {
-      vorpal.log('Checking for updates...');
-    }
+    program.debug('Checking for updates...');
 
     // Check NPM for latest CLI version and compare to our own.
     request({ url: URL, timeout: 1000 }, function (error, response, body) {
@@ -38,9 +37,7 @@ export default function(vorpal, args) {
         return resolve(data);
       }
 
-      if (vorpal.verbose) {
-        vorpal.log(chalk.red('Unable to check for latest version. Are you connected to the Internet?'));
-      }
+      program.debug(chalk.red('Unable to check for latest version. Are you connected to the Internet?'));
 
       reject(error);
     });

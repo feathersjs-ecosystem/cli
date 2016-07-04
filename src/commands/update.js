@@ -2,31 +2,42 @@
  * Self update Feathers CLI or Feathers dependencies
  */
 
+import chalk from 'chalk';
 import checkForUpdates from '../utils/check-for-updates';
 import updateCLI from '../utils/update-cli';
 
-export default function(vorpal) {
-  const chalk = vorpal.chalk;
+export default function(program) {
 
-  vorpal
-    .command('update', 'Update feathers-cli')
+  program
+    .command('update')
+    .description('update the feathers-cli')
     .alias('upgrade')
     .action(args => {
-      return checkForUpdates(vorpal, args)
+      checkForUpdates.bind(program)(args)
         .then(data => {
           if (data && !data.outOfDate) {
-            vorpal.log(`You are already on the latest version.`);
-            vorpal.log();
+            console.log(`You are already on the latest version.`);
+            console.log();
 
-            return Promise.resolve();
+            return Promise.reject();
           }
 
-          vorpal.log(`New version (${chalk.green(data.latestVersion)}) found!`);
+          console.log(`New version (${chalk.green(data.latestVersion)}) found!`);
+          Promise.resolve();
+        })
+        .then(() => {
+          console.log(`Installing latest feathers-cli version...`);
+          console.log();
 
-          return updateCLI(vorpal, args)
-            .then(() => {
-              process.exit(0);
-            });
+          return updateCLI.bind(program)(args);
+        })
+        .then(() => {
+          console.log(chalk.green('Update Successful!'));
+        })
+        .catch(error => {
+          if (error) {
+            console.log(chalk.red(error.message));
+          }
         });
     });
 }

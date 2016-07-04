@@ -4,84 +4,67 @@
  */
 
 import path from 'path';
+import chalk from 'chalk';
+import inquirer from 'inquirer';
 import { existsSync as exists } from 'fs';
 import merge from 'lodash.merge';
 import generators from 'feathers-generator';
 
-const autocompletes = [
-  'app',
-  'filter',
-  'hook',
-  'middleware',
-  'model',
-  'secret',
-  'service',
-  'plugin'
-];
+export default function(program) {
+  program
+    .command('generate [template] [name]')
+    .description('generate a template')
+    .usage(`app my-app
 
-export default function(vorpal) {
-  const chalk = vorpal.chalk;
+      Automatically generate an:
+        - app
+        - hook
+        - service
+        - filter
+        - model
+        - middleware
+        - plugin
 
-  vorpal
-    .command('generate [template] [name]', `Allows you to automatically generate a:
-      - app
-      - hook
-      - service
-      - filter
-      - model
-      - middleware
-      - plugin
-
-      Defaults to an app when an argument isn't provided.`)
+      (defaults to an app template)
+    `)
     .alias('g')
-    .alias('-g')
-    .option('-f, --force', 'Force file overwrite.')
-    .option('-p, --path <path>', 'That path to output to. Default is the current working directory.')
-    .autocomplete(autocompletes)
-    // .help(function(args) {
-    //   // TODO (EK): Add more descriptive help
-    // })
+    .option('-f, --force', 'force file overwrites')
+    .option('-p, --path <path>', 'output path (default is the current working directory)')
     .action(args => {
       const DEFAULTS = {
         template: 'app',
         // name: path.relative('..', process.cwd()),
-        options: {
-          path: '.',
-          force: false
-        }
+        path: '.',
+        force: false
       };
 
       args = merge(DEFAULTS, args);
 
-      const outputDirectory = path.resolve(args.options.path);
+      const outputDirectory = path.resolve(args.path);
 
-      if (vorpal.verbose) {
-        vorpal.log('Running generator with options', args);
-      }
+      program.debug(`Running '${args.template}' generator with options`, args);
 
-      if (exists(outputDirectory) && !args.options.force) {
-        return vorpal.activeCommand.prompt([{
+      if (exists(outputDirectory) && !args.force) {
+        inquirer.prompt([{
           type: 'confirm',
           name: 'ok',
           message: args.path === '.' ? `Generate ${args.template} in current directory?` : `${outputDirectory} already exists. Continue?`
         }])
         .then(answers => {
-          vorpal.log('answers', answers);
+          console.log('answers', answers);
           
           if (answers.ok) {
-            if (vorpal.verbose) {
-              vorpal.log(`Using directory: ${outputDirectory}`);
-            }
+            program.debug(`Using directory: ${outputDirectory}`);
             // run();
             
-            vorpal.log();
+            console.log();
           }
         }).catch(e => {
           console.log('ERROR', e)
         });
       }
       else {
-        vorpal.log('Running with new dir');
+        console.log('Running with new dir');
         // run();
       }
     });

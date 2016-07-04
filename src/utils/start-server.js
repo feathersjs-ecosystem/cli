@@ -1,26 +1,24 @@
-import packageConfig from '../../package.json';
+import pkg from '../../package.json';
 import { exec } from 'child_process';
 
-export default function(vorpal, args, done) {
-  const chalk = vorpal.chalk;
+export default function(args) {
+  return new Promise((resolve, reject) => {
+    console.log(`Starting Feathers app: ${pkg.name}`);
+    console.log();
 
-  vorpal.log(`Starting Feathers app: ${packageConfig.name}`);
-  vorpal.log();
+    // TODO (EK): Check to see if we are actually in an app directory
+    // Maybe check for a feathers.json file.
+    
+    // TODO (EK): Add support for args.port. Possibly just set as
+    // an env var if present.
 
-  // TODO (EK): Check to see if we are actually in an app directory
-  // Maybe check for a feathers.json file.
+    // TODO (EK): Might want to switch this to spawn a process instead
+    exec(`npm start`, (error, response) => {
+      if (error) {
+        return reject(error);
+      }
 
-  // TODO (EK): Might want to switch this to spawn a process instead
-  exec(`npm start`, (error, response) => {
-    if (error) {
-      vorpal.log(chalk.red('There was a problem starting your Feathers app'));
-      vorpal.log();
-      vorpal.log(error.message);
-
-      return done(error);
-    }
-
-    vorpal.log(chalk.green(response));
-    done(null, response);
+      resolve(response);
+    });
   });
 }
