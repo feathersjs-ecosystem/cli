@@ -30,16 +30,15 @@ export default function(program) {
     .alias('g')
     .option('-f, --force', 'force file overwrites')
     .option('-p, --path <path>', 'output path (default is the current working directory)')
-    .action(args => {
+    .action((template, name, command) => {
       const DEFAULTS = {
         template: 'app',
-        // name: path.relative('..', process.cwd()),
+        name: path.relative('..', process.cwd()),
         path: '.',
         force: false
       };
 
-      args = merge(DEFAULTS, args);
-
+      const args = merge(DEFAULTS, { template, name, force: command.force, path: command.path });
       const outputDirectory = path.resolve(args.path);
 
       program.debug(`Running '${args.template}' generator with options`, args);
@@ -59,8 +58,6 @@ export default function(program) {
             
             console.log();
           }
-        }).catch(e => {
-          console.log('ERROR', e)
         });
       }
       else {
