@@ -69,4 +69,9 @@ export default function() {
       program.help();
     }
   });
+
+  // Add some extra padding
+  process.on('exit', function () {
+    console.log();
+  });
 }
