@@ -64,6 +64,8 @@ export default function(program) {
             if (error) {
               console.log(chalk.red('ERROR', error));
             }
+
+            process.exit(1);
           });
       }
 
