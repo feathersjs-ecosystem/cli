@@ -8,7 +8,7 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import { existsSync as exists } from 'fs';
 import merge from 'lodash.merge';
-import generators from 'feathers-generator';
+import Generator from 'feathers-generator';
 
 export default function(program) {
   program
@@ -38,31 +38,53 @@ export default function(program) {
         force: false
       };
 
-      const args = merge(DEFAULTS, { template, name, force: command.force, path: command.path });
-      const outputDirectory = path.resolve(args.path);
+      let args = merge(DEFAULTS, { template, name, force: command.force, path: command.path });
+      args.root = path.resolve(args.path);
+      
+      const run = function() {
+        program.debug(`Running '${args.template}' generator with options`, args);
+        program.debug(`Using directory: ${args.root}`);
+        
+        const generator = Generator(args);
 
-      program.debug(`Running '${args.template}' generator with options`, args);
+        generator.getQuestions()
+          .then(questions => {
+            // Get user to answer questions
+            return inquirer.prompt(questions);
+          })
+          .then(answers => {
+            // Send answers back to generator
+            return generator.generate(answers);
+          })
+          .then(dependencies => {
+            // npm install dependencies
+            // { devDependencies: [], dependencies: [] }
+          })
+          .catch(error => {
+            if (error) {
+              console.log(chalk.red('ERROR', error));
+            }
+          });
+      }
 
-      if (exists(outputDirectory) && !args.force) {
+      if (exists(args.root) && !args.force) {
         inquirer.prompt([{
           type: 'confirm',
           name: 'ok',
-          message: args.path === '.' ? `Generate ${args.template} in current directory?` : `${outputDirectory} already exists. Continue?`
+          message: args.path === '.' ? `Generate ${args.template} in current directory?` : `${args.root} already exists. Continue?`
         }])
         .then(answers => {
-          console.log('answers', answers);
-          
           if (answers.ok) {
-            program.debug(`Using directory: ${outputDirectory}`);
-            // run();
-            
-            console.log();
+            run();
           }
         });
       }
       else {
-        console.log('Running with new dir');
-        // run();
+        // We are using a new directory so use the root directory
+        // name as the default name.
+        args.name = path.parse(args.root).name;
+
+        run();
       }
     });
 }
