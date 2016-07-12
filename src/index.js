@@ -37,7 +37,7 @@ export default function() {
   // https://github.com/yeoman/yo/blob/master/lib/cli.js#L172
   
 
-  // Register our commands with Vorpal
+  // Register our commands with commander
   // debug(program);
   // deploy(program);
   doctor(program);
@@ -62,13 +62,24 @@ export default function() {
       program.debug(`Current Version: ${data.localVersion} ${chalk.green('OK')}`);
     }
 
+    run();
+  })
+  .catch(error => {
+    if (error) {
+      program.debug(chalk.red('Error checking for updates:', error.message));
+    }
+
+    run();
+  });
+
+  const run = () => {
     program.parse(args);
     
     // Show help if no other command was called
     if (!program.args.length) {
       program.help();
     }
-  });
+  };
 
   // Add some extra padding
   process.on('exit', function () {

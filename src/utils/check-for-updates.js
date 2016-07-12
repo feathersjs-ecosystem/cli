@@ -18,7 +18,7 @@ export default function(args) {
     program.debug('Checking for updates...');
 
     // Check NPM for latest CLI version and compare to our own.
-    request({ url: URL, timeout: 1000 }, function (error, response, body) {
+    request({ url: URL, timeout: 2000 }, function (error, response, body) {
       let data;
 
       // TODO (EK): Check for latest feathers-generator version
@@ -37,7 +37,9 @@ export default function(args) {
         return resolve(data);
       }
 
-      program.debug(chalk.red('Unable to check for latest version. Are you connected to the Internet?'));
+      if (error.code === 'ENOTFOUND') {
+        program.debug(chalk.red('Unable to check for latest version. Are you connected to the Internet?'));
+      }
 
       reject(error);
     });

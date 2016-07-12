@@ -1,5 +1,3 @@
-import packageConfig from '../../package.json';
-import chalk from 'chalk';
 import { spawn } from 'child_process';
 
 export default function(args) {

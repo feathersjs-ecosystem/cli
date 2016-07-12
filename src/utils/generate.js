@@ -18,9 +18,10 @@ export default function(args) {
       // Send answers back to generator
       return generator.generate(answers);
     })
-    .then(dependencies => {
-      // npm install dependencies
-      // { devDependencies: [], dependencies: [] }
+    .then(message => {
+      message = message || 'Success!';
+      
+      console.log(chalk.green(message));
     })
     .catch(error => {
       if (error) {
