@@ -1,3 +1,5 @@
+/* jshint quotmark: false */
+
 import Debug from 'debug';
 import program from 'commander';
 import chalk from 'chalk';
@@ -22,7 +24,7 @@ export default function() {
   // If that fails show an error and exit out. We don't want to create files as root.
   rootCheck(`
     ${chalk.red("Easy with the 'sudo'.")}
-    
+
     Since feathers is a user command, there is no need to execute it with root permissions.
     If you're having permission errors when using feathers without sudo, please spend a few
     minutes learning more about how your system should work and make any necessary repairs.
@@ -35,7 +37,7 @@ export default function() {
   // TODO (EK): Add opt-in analytics reporting
   // using GA + insight. Look at how yeoman does it
   // https://github.com/yeoman/yo/blob/master/lib/cli.js#L172
-  
+
 
   // Register our commands with commander
   // debug(program);
@@ -72,14 +74,14 @@ export default function() {
     run();
   });
 
-  const run = () => {
+  function run() {
     program.parse(args);
-    
+
     // Show help if no other command was called
     if (!program.args.length) {
       program.help();
     }
-  };
+  }
 
   // Add some extra padding
   process.on('exit', function () {

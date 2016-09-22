@@ -1,11 +1,11 @@
 import { spawn } from 'child_process';
 
-export default function(args) {
+export default function(/*args*/) {
   const program = this;
 
   return new Promise((resolve, reject) => {
     program.debug(`Running 'npm install -g feathers-cli'...`);
-    
+
     const npm = spawn('npm', ['install', '-g', 'feathers-cli'], {stdio: 'inherit'});
 
     npm.on('close', function (code) {

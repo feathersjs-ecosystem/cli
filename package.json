@@ -65,7 +65,8 @@
     "metalsmith": "^2.1.0",
     "ora": "^0.2.3",
     "request": "^2.72.0",
-    "root-check": "^1.0.0"
+    "root-check": "^1.0.0",
+    "vorpal": "^1.11.4"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",

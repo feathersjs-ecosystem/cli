@@ -3,7 +3,7 @@ import semver from 'semver';
 import chalk from 'chalk';
 import pkg from '../../package.json';
 
-const URL = 'https://registry.npmjs.org/feathers-cli'
+const URL = 'https://registry.npmjs.org/feathers-cli';
 
 export default function(args) {
   const program = this;
