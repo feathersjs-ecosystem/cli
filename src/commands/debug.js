@@ -1,5 +1,5 @@
 /*
- * Interactive REPL with your app mounted 
+ * Interactive REPL with your app mounted
  * as an available variable.
  */
 
@@ -16,7 +16,7 @@
 
   vorpal
     .command('debug', 'Drop into an interactive REPL with your app as the context')
-    .action((args, callback) => {
+    .action((/*args, callback*/) => {
         // TODO (EK):
         // 1. Look at using Vantage https://github.com/dthree/vantage
 
