@@ -29,14 +29,16 @@ export default function(program) {
     .alias('g')
     .option('-f, --force', 'force file overwrites')
     .option('-p, --path <path>', 'output path (default is the current working directory)')
+    .option('-m, --mount <path>', 'path to feathers bootstrap json (default is false, which skips)')
     .action((template, name, command) => {
       const DEFAULTS = {
         template: 'app',
         path: '.',
+        mount: false,
         force: false
       };
 
-      let args = merge(DEFAULTS, { template, name, force: command.force, path: command.path });
+      let args = merge(DEFAULTS, { template, name, force: command.force, path: command.path, mount: command.mount });
       args.root = path.resolve(args.path);
       args.name = args.name || path.parse(args.root).name;
 
