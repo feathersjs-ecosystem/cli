@@ -6,6 +6,7 @@ export default function(/*args*/) {
   return new Promise((resolve, reject) => {
     program.debug(`Running 'npm install -g feathers-cli'...`);
 
+    // TODO (EK): Use program.executeSubCommand
     const npm = spawn('npm', ['install', '-g', 'feathers-cli'], {stdio: 'inherit'});
 
     npm.on('close', function (code) {

@@ -12,7 +12,7 @@ export default function(/*args*/) {
     // TODO (EK): Add support for args.port. Possibly just set as
     // an env var if present.
 
-    // TODO (EK): Might want to switch this to spawn a process instead
+    // TODO (EK): Use program.executeSubCommand instead
     exec(`npm start`, (error, response) => {
       if (error) {
         return reject(error);
