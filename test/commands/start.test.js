@@ -1,13 +1,13 @@
 import { expect } from 'chai';
-import generate from '../../src/commands/generate';
+import start from '../../src/commands/start';
 import program from 'commander';
 
-describe('command:generate', () => {
+describe('command:start', () => {
   it('registers the command', () => {
-    generate(program);
+    start(program);
 
     const command = program.commands
-      .filter(c => c.name() === 'generate')
+      .filter(c => c.name() === 'start')
       .reduce(c => !!c);
 
     expect(command).to.not.equal(undefined);
