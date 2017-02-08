@@ -7,7 +7,8 @@ const env = yeoman.createEnv();
 const feathersGenerators = 'generator-feathers/generators';
 
 Object.keys(meta).forEach(name => {
-  env.register(require.resolve(`${feathersGenerators}/${name}`), `feathers:${name}`);
+  const moduleName = name === 'plugin' ? 'generator-feathers-plugin' : `${feathersGenerators}/${name}`;
+  env.register(require.resolve(moduleName), `feathers:${name}`);
 });
 
 module.exports = function(argv, generatorOptions = {
@@ -23,7 +24,7 @@ module.exports = function(argv, generatorOptions = {
     .usage('generate [type]');
 
   program.command('generate [type]')
-  .description(description)
+    .description(description)
     .action(type => {
       if (!type) {
         program.help();
