@@ -1,5 +1,6 @@
 import yeoman from 'yeoman-environment';
 import program from 'commander';
+import meta from 'generator-feathers/meta';
 
 const env = yeoman.createEnv();
 
@@ -16,19 +17,17 @@ env.register(require.resolve('generator-feathers-plugin'), 'feathers:plugin');
 module.exports = function(argv, generatorOptions = {
   disableNotifyUpdate: true
 }) {
+  let description = 'Run a generator. Type can be\n';
+
+  Object.keys(meta).forEach(name => {
+    description += `\t• ${name} - ${meta[name]}\n`;
+  });
+
   program.version(require('../package.json').version)
     .usage('generate [type]');
 
   program.command('generate [type]')
-  .description(`Run a generator. Type can be
-  • app - Create a new Feathers application in the current folder
-  • authentication - Set up authentication for the current application
-  • connection - Initialize a new database connection
-  • hook - Create a new hook
-  • middleware - Create an Express middleware
-  • service - Generate a new service
-  • plugin - Create a new Feathers plugin
-`)
+  .description(description)
     .action(type => {
       if (!type) {
         program.help();
