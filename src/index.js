@@ -6,13 +6,9 @@ const env = yeoman.createEnv();
 
 const feathersGenerators = 'generator-feathers/generators';
 
-env.register(require.resolve(`${feathersGenerators}/app`), 'feathers:app');
-env.register(require.resolve(`${feathersGenerators}/authentication`), 'feathers:authentication');
-env.register(require.resolve(`${feathersGenerators}/connection`), 'feathers:connection');
-env.register(require.resolve(`${feathersGenerators}/hook`), 'feathers:hook');
-env.register(require.resolve(`${feathersGenerators}/middleware`), 'feathers:middleware');
-env.register(require.resolve(`${feathersGenerators}/service`), 'feathers:service');
-env.register(require.resolve('generator-feathers-plugin'), 'feathers:plugin');
+Object.keys(meta).forEach(name => {
+  env.register(require.resolve(`${feathersGenerators}/${name}`), `feathers:${name}`);
+});
 
 module.exports = function(argv, generatorOptions = {
   disableNotifyUpdate: true
