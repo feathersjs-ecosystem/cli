@@ -24,6 +24,8 @@ module.exports = function(argv, generatorOptions = {
   program.version(require('../package.json').version)
     .usage('generate [type]');
 
+  console.error('WARNING: This version of the Feathers CLI is deprecated and no longer maintained. Please use @feathersjs/cli instead. See https://docs.feathersjs.com/migrating.html for more information.');
+
   if(!semver.satisfies(process.version, '>= 6.0.0')) {
     console.error('The Feathers CLI and generated application requires Node v6.0.0 or later.');
     return process.exit(1);
