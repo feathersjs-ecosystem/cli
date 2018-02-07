@@ -8,6 +8,8 @@
 [![Test Coverage](https://codeclimate.com/github/feathersjs/cli/badges/coverage.svg)](https://codeclimate.com/github/feathersjs/cli/coverage)
 [![Dependency Status](https://img.shields.io/david/feathersjs/cli.svg)](https://david-dm.org/feathersjs/cli)
 [![Download Status](https://img.shields.io/npm/dm/@feathersjs/cli.svg)](https://www.npmjs.com/package/@feathersjs/cli)
+[![Telegram Status](https://img.shields.io/badge/Telegram_RU_chat:-Feathers-216bc1.svg?style=flat)](https://t.me/featherjs)
+[![Slack Status](http://slack.feathersjs.com/badge.svg)](http://slack.feathersjs.com)
 
 ## Installation
 
