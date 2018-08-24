@@ -1,13 +1,10 @@
 # Feathers CLI
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/feathersjs/cli.svg)](https://greenkeeper.io/)
-
-> The command line interface for Feathers applications
+> __Important:__ The code for this module has been moved into the main Feathers repository at [feathersjs/feathers](https://github.com/feathersjs/feathers) ([package direct link](https://github.com/feathersjs/feathers/tree/master/packages/cli)). Please open issues and pull requests there.
 
 [![Build Status](https://img.shields.io/travis/feathersjs/cli/master.svg)](https://travis-ci.org/feathersjs/cli)
-[![Test Coverage](https://codeclimate.com/github/feathersjs/cli/badges/coverage.svg)](https://codeclimate.com/github/feathersjs/cli/coverage)
-[![Dependency Status](https://img.shields.io/david/feathersjs/cli.svg)](https://david-dm.org/feathersjs/cli)
-[![Download Status](https://img.shields.io/npm/dm/@feathersjs/cli.svg)](https://www.npmjs.com/package/@feathersjs/cli)
+
+The command line interface for Feathers applications
 
 ## Installation
 
