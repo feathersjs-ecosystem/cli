@@ -1,65 +1,21 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## [v3.8.8](https://github.com/feathersjs/cli/tree/v3.8.8) (2018-12-15)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v3.8.0...v3.8.8)
 
-<a name="3.8.7"></a>
-## [3.8.7](https://github.com/feathersjs/feathers/compare/@feathersjs/cli@3.8.6...@feathersjs/cli@3.8.7) (2018-10-25)
+**Closed issues:**
 
+- \[Neat\] Interactive shell [\#148](https://github.com/feathersjs/cli/issues/148)
+- .sequelizerc could be evaluated before generating a service based on Sequelize [\#146](https://github.com/feathersjs/cli/issues/146)
+- Feature Request: Typescript Support [\#114](https://github.com/feathersjs/cli/issues/114)
+- Generating a sequelize service backed by NeDB causes app to throw. [\#109](https://github.com/feathersjs/cli/issues/109)
+- Feature Request for feathersrc [\#88](https://github.com/feathersjs/cli/issues/88)
 
-### Bug Fixes
+**Merged pull requests:**
 
-* Make Mocha a proper devDependency for every repository ([#1053](https://github.com/feathersjs/feathers/issues/1053)) ([9974803](https://github.com/feathersjs/feathers/commit/9974803))
-
-
-
-
-
-<a name="3.8.6"></a>
-## [3.8.6](https://github.com/feathersjs/feathers/compare/@feathersjs/cli@3.8.5...@feathersjs/cli@3.8.6) (2018-10-06)
-
-**Note:** Version bump only for package @feathersjs/cli
-
-
-
-
-
-<a name="3.8.5"></a>
-## [3.8.5](https://github.com/feathersjs/feathers/compare/@feathersjs/cli@3.8.4...@feathersjs/cli@3.8.5) (2018-09-24)
-
-**Note:** Version bump only for package @feathersjs/cli
-
-
-
-
-
-<a name="3.8.4"></a>
-## [3.8.4](https://github.com/feathersjs/feathers/compare/@feathersjs/cli@3.8.3...@feathersjs/cli@3.8.4) (2018-09-21)
-
-**Note:** Version bump only for package @feathersjs/cli
-
-
-
-
-
-<a name="3.8.3"></a>
-## [3.8.3](https://github.com/feathersjs/feathers/compare/@feathersjs/cli@3.8.2...@feathersjs/cli@3.8.3) (2018-09-17)
-
-**Note:** Version bump only for package @feathersjs/cli
-
-
-
-
-
-<a name="3.8.2"></a>
-## [3.8.2](https://github.com/feathersjs/feathers/compare/@feathersjs/cli@3.8.1...@feathersjs/cli@3.8.2) (2018-09-02)
-
-**Note:** Version bump only for package @feathersjs/cli
-
-<a name="3.8.1"></a>
-## 3.8.1
-
-- Migrate to Monorepo ([feathers#462](https://github.com/feathersjs/feathers/issues/462))
+- Update generator-feathers to the latest version 🚀 [\#167](https://github.com/feathersjs/cli/pull/167) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Add Greenkeeper badge 🌴 [\#166](https://github.com/feathersjs/cli/pull/166) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Back merge with changes from monorepo to put back into own repository [\#165](https://github.com/feathersjs/cli/pull/165) ([daffl](https://github.com/daffl))
 
 ## [v3.8.0](https://github.com/feathersjs/cli/tree/v3.8.0) (2018-08-13)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v3.7.6...v3.8.0)
