@@ -52,7 +52,7 @@
   "dependencies": {
     "@feathersjs/tools": "^0.1.7",
     "commander": "^2.19.0",
-    "generator-feathers": "2.8.2",
+    "generator-feathers": "2.8.3",
     "generator-feathers-plugin": "1.0.1",
     "semver": "^5.6.0",
     "update-notifier": "^2.5.0",
