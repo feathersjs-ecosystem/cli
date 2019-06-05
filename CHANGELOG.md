@@ -1,5 +1,18 @@
 # Change Log
 
+## [v4.0.0-pre.1](https://github.com/feathersjs/cli/tree/v4.0.0-pre.1) (2019-06-05)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v3.9.0...v4.0.0-pre.1)
+
+**Closed issues:**
+
+- An in-range update of update-notifier is breaking the build 🚨 [\#177](https://github.com/feathersjs/cli/issues/177)
+
+**Merged pull requests:**
+
+- Add v4 upgrade command and update dependencies [\#180](https://github.com/feathersjs/cli/pull/180) ([daffl](https://github.com/daffl))
+- Update semver to the latest version 🚀 [\#175](https://github.com/feathersjs/cli/pull/175) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update mocha to the latest version 🚀 [\#174](https://github.com/feathersjs/cli/pull/174) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v3.9.0](https://github.com/feathersjs/cli/tree/v3.9.0) (2018-12-30)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v3.8.10...v3.9.0)
 
