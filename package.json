@@ -1,7 +1,7 @@
 {
   "name": "@feathersjs/cli",
   "description": "Command-line Feathers generator",
-  "version": "3.9.0",
+  "version": "4.0.0-pre.0",
   "homepage": "https://github.com/feathersjs/cli",
   "main": "lib/",
   "bin": {
@@ -51,17 +51,17 @@
   "preferGlobal": true,
   "dependencies": {
     "@feathersjs/tools": "^0.1.7",
-    "commander": "^2.19.0",
-    "generator-feathers": "2.10.0",
+    "commander": "^2.20.0",
+    "generator-feathers": "^4.0.0-pre.2",
     "generator-feathers-plugin": "1.0.1",
-    "semver": "^6.0.0",
-    "update-notifier": "^2.5.0",
+    "semver": "^6.1.1",
+    "update-notifier": "^3.0.0",
     "yeoman-environment": "^2.3.4"
   },
   "devDependencies": {
     "istanbul": "^1.1.0-alpha.1",
     "lodash": "^4.17.11",
-    "mocha": "^6.0.0",
+    "mocha": "^6.1.4",
     "semistandard": "^13.0.1"
   }
 }
