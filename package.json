@@ -25,7 +25,7 @@
     "url": "https://github.com/feathersjs/cli/issues"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 8"
   },
   "scripts": {
     "publish": "git push origin --tags && npm run changelog && git push origin",
