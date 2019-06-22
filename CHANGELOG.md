@@ -1,5 +1,8 @@
 # Change Log
 
+## [v4.0.0-pre.2](https://github.com/feathersjs/cli/tree/v4.0.0-pre.2) (2019-06-22)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.1...v4.0.0-pre.2)
+
 ## [v4.0.0-pre.1](https://github.com/feathersjs/cli/tree/v4.0.0-pre.1) (2019-06-05)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v3.9.0...v4.0.0-pre.1)
 
