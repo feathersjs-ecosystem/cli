@@ -1,5 +1,14 @@
 # Change Log
 
+## [v4.0.0-pre.3](https://github.com/feathersjs/cli/tree/v4.0.0-pre.3) (2019-07-12)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.2...v4.0.0-pre.3)
+
+**Closed issues:**
+
+- Missing uws dependency in engine.io server.js feathers dependency [\#182](https://github.com/feathersjs/cli/issues/182)
+- EINVAL Error on npm install @feathers/cli [\#181](https://github.com/feathersjs/cli/issues/181)
+- `feathers generate app` fails to generate the project with an AssertionError [\#179](https://github.com/feathersjs/cli/issues/179)
+
 ## [v4.0.0-pre.2](https://github.com/feathersjs/cli/tree/v4.0.0-pre.2) (2019-06-22)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.1...v4.0.0-pre.2)
 
