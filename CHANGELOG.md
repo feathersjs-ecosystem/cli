@@ -1,5 +1,22 @@
 # Change Log
 
+## [Unreleased](https://github.com/feathersjs/cli/tree/HEAD)
+
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.5...HEAD)
+
+**Closed issues:**
+
+- 4.0.0pre4 cli initial an project with mongoose with an error [\#183](https://github.com/feathersjs/cli/issues/183)
+
+## [v4.0.0-pre.5](https://github.com/feathersjs/cli/tree/v4.0.0-pre.5) (2019-07-31)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.4...v4.0.0-pre.5)
+
+**Closed issues:**
+
+- feathers generate for sequelize service throws unhandled 'error' event [\#176](https://github.com/feathersjs/cli/issues/176)
+- OverwriteModelError and Mocha watch on generated models [\#173](https://github.com/feathersjs/cli/issues/173)
+- The generated test command is not working in windows os [\#172](https://github.com/feathersjs/cli/issues/172)
+
 ## [v4.0.0-pre.4](https://github.com/feathersjs/cli/tree/v4.0.0-pre.4) (2019-07-17)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.3...v4.0.0-pre.4)
 
