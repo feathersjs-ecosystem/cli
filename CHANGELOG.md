@@ -1,12 +1,15 @@
 # Change Log
 
-## [Unreleased](https://github.com/feathersjs/cli/tree/HEAD)
-
-[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.5...HEAD)
+## [v4.0.0-pre.6](https://github.com/feathersjs/cli/tree/v4.0.0-pre.6) (2019-08-19)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.5...v4.0.0-pre.6)
 
 **Closed issues:**
 
 - 4.0.0pre4 cli initial an project with mongoose with an error [\#183](https://github.com/feathersjs/cli/issues/183)
+
+**Merged pull requests:**
+
+- Update commander to the latest version 🚀 [\#184](https://github.com/feathersjs/cli/pull/184) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
 
 ## [v4.0.0-pre.5](https://github.com/feathersjs/cli/tree/v4.0.0-pre.5) (2019-07-31)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.4...v4.0.0-pre.5)
