@@ -50,18 +50,18 @@
   },
   "preferGlobal": true,
   "dependencies": {
+    "generator-feathers": "4.0.0-pre.7",
     "@feathersjs/tools": "^0.1.7",
     "commander": "^3.0.0",
-    "generator-feathers": "^4.0.0-pre.6",
     "generator-feathers-plugin": "1.0.1",
-    "semver": "^6.2.0",
+    "semver": "^6.3.0",
     "update-notifier": "^3.0.1",
     "yeoman-environment": "^2.4.0"
   },
   "devDependencies": {
     "istanbul": "^1.1.0-alpha.1",
-    "lodash": "^4.17.14",
-    "mocha": "^6.1.4",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.0",
     "semistandard": "^13.0.1"
   }
 }
