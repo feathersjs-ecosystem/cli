@@ -1,5 +1,16 @@
 # Change Log
 
+## [v4.1.0](https://github.com/feathersjs/cli/tree/v4.1.0) (2019-08-27)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0...v4.1.0)
+
+## [v4.0.0](https://github.com/feathersjs/cli/tree/v4.0.0) (2019-08-27)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.6...v4.0.0)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#186](https://github.com/feathersjs/cli/pull/186) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update semistandard to the latest version 🚀 [\#185](https://github.com/feathersjs/cli/pull/185) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.0.0-pre.6](https://github.com/feathersjs/cli/tree/v4.0.0-pre.6) (2019-08-19)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.0.0-pre.5...v4.0.0-pre.6)
 
