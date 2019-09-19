@@ -1,5 +1,17 @@
 # Change Log
 
+## [v4.2.0](https://github.com/feathersjs/cli/tree/v4.2.0) (2019-09-19)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.1.1...v4.2.0)
+
+**Closed issues:**
+
+- Generate service error with JS default config [\#190](https://github.com/feathersjs/cli/issues/190)
+- feathers cli v4 upgrade error [\#189](https://github.com/feathersjs/cli/issues/189)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#191](https://github.com/feathersjs/cli/pull/191) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.1.1](https://github.com/feathersjs/cli/tree/v4.1.1) (2019-09-04)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.1.0...v4.1.1)
 
