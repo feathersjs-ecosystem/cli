@@ -1,5 +1,16 @@
 # Change Log
 
+## [v4.2.1](https://github.com/feathersjs/cli/tree/v4.2.1) (2019-09-20)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.0...v4.2.1)
+
+**Closed issues:**
+
+- Type error test/authentication.test.ts [\#187](https://github.com/feathersjs/cli/issues/187)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#192](https://github.com/feathersjs/cli/pull/192) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.2.0](https://github.com/feathersjs/cli/tree/v4.2.0) (2019-09-19)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.1.1...v4.2.0)
 
