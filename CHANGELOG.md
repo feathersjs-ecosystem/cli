@@ -1,5 +1,18 @@
 # Change Log
 
+## [v4.2.2](https://github.com/feathersjs/cli/tree/v4.2.2) (2019-10-23)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.1...v4.2.2)
+
+**Closed issues:**
+
+- Creating a model with name "model" causes issues [\#195](https://github.com/feathersjs/cli/issues/195)
+- feathersjs v4 after upgrade to typescript getting services\index.js doesn't exist error [\#194](https://github.com/feathersjs/cli/issues/194)
+- MongoDB no longer offered in feather cli [\#193](https://github.com/feathersjs/cli/issues/193)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#196](https://github.com/feathersjs/cli/pull/196) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.2.1](https://github.com/feathersjs/cli/tree/v4.2.1) (2019-09-20)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.0...v4.2.1)
 
