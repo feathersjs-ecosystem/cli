@@ -1,5 +1,12 @@
 # Change Log
 
+## [v4.2.3](https://github.com/feathersjs/cli/tree/v4.2.3) (2019-10-31)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.2...v4.2.3)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#197](https://github.com/feathersjs/cli/pull/197) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.2.2](https://github.com/feathersjs/cli/tree/v4.2.2) (2019-10-23)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.1...v4.2.2)
 
