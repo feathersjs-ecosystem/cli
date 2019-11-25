@@ -36,7 +36,6 @@ $ feathers help
     	• connection - Initialize a new database connection
     	• hook - Create a new hook
     	• middleware - Create an Express middleware
-    	• secret - Generate a new authentication secret
     	• service - Generate a new service
     	• plugin - Create a new Feathers plugin
 
