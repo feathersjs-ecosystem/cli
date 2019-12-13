@@ -1,5 +1,18 @@
 # Change Log
 
+## [v4.2.4](https://github.com/feathersjs/cli/tree/v4.2.4) (2019-12-13)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.3...v4.2.4)
+
+**Closed issues:**
+
+- Secret generator removed? [\#200](https://github.com/feathersjs/cli/issues/200)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#202](https://github.com/feathersjs/cli/pull/202) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update update-notifier to the latest version 🚀 [\#201](https://github.com/feathersjs/cli/pull/201) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update commander to the latest version 🚀 [\#198](https://github.com/feathersjs/cli/pull/198) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.2.3](https://github.com/feathersjs/cli/tree/v4.2.3) (2019-10-31)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.2...v4.2.3)
 
