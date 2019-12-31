@@ -1,5 +1,17 @@
 # Change Log
 
+## [v4.2.5](https://github.com/feathersjs/cli/tree/v4.2.5) (2019-12-31)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.4...v4.2.5)
+
+**Closed issues:**
+
+- feathers generate connection [\#203](https://github.com/feathersjs/cli/issues/203)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#205](https://github.com/feathersjs/cli/pull/205) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update semver to the latest version 🚀 [\#204](https://github.com/feathersjs/cli/pull/204) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.2.4](https://github.com/feathersjs/cli/tree/v4.2.4) (2019-12-13)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.3...v4.2.4)
 
