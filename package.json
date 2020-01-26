@@ -61,7 +61,7 @@
   "devDependencies": {
     "istanbul": "^1.1.0-alpha.1",
     "lodash": "^4.17.15",
-    "mocha": "^6.2.0",
+    "mocha": "^7.0.1",
     "semistandard": "^14.0.0"
   }
 }
