@@ -1,5 +1,18 @@
 # Change Log
 
+## [v4.3.0](https://github.com/feathersjs/cli/tree/v4.3.0) (2020-02-13)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.5...v4.3.0)
+
+**Closed issues:**
+
+- feather cli v4 upgrade error [\#209](https://github.com/feathersjs/cli/issues/209)
+- Feathers generate hook returns Cannot read property 'files' of undefined [\#206](https://github.com/feathersjs/cli/issues/206)
+
+**Merged pull requests:**
+
+- Update generator-feathers to the latest version 🚀 [\#210](https://github.com/feathersjs/cli/pull/210) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update mocha to the latest version 🚀 [\#207](https://github.com/feathersjs/cli/pull/207) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v4.2.5](https://github.com/feathersjs/cli/tree/v4.2.5) (2019-12-31)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.4...v4.2.5)
 
