@@ -1,6 +1,6 @@
 # Feathers CLI
 
-[![Build Status](https://img.shields.io/travis/feathersjs/cli/master.svg)](https://travis-ci.org/feathersjs/cli) [![Greenkeeper badge](https://badges.greenkeeper.io/feathersjs/cli.svg)](https://greenkeeper.io/)
+[![CI](https://github.com/feathersjs/cli/workflows/CI/badge.svg)](https://github.com/feathersjs/cli/actions?query=workflow%3ACI) ![Dependency status](https://david-dm.org/feathersjs/cli.svg)
 
 The command line interface for Feathers applications
 
