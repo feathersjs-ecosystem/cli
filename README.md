@@ -1,6 +1,6 @@
 # Feathers CLI
 
-[![CI](https://github.com/feathersjs/cli/workflows/CI/badge.svg)](https://github.com/feathersjs/cli/actions?query=workflow%3ACI)
+[![CI](https://github.com/feathersjs/cli/workflows/CI/badge.svg)](https://github.com/feathersjs/cli/actions?query=workflow%3ACI) ![Dependency status](https://david-dm.org/feathersjs/cli.svg)
 
 The command line interface for Feathers applications
 
