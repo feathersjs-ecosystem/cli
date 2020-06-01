@@ -56,12 +56,12 @@
     "generator-feathers-plugin": "1.0.1",
     "semver": "^7.3.2",
     "update-notifier": "^4.1.0",
-    "yeoman-environment": "^2.9.6"
+    "yeoman-environment": "^2.10.3"
   },
   "devDependencies": {
     "lodash": "^4.17.15",
-    "mocha": "^7.1.2",
-    "npm-check-updates": "^4.1.2",
+    "mocha": "^7.2.0",
+    "npm-check-updates": "^6.0.1",
     "semistandard": "^14.2.0"
   }
 }
