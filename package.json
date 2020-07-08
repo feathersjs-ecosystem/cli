@@ -50,8 +50,8 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "generator-feathers": "4.2.0",
-    "@feathersjs/tools": "^0.1.7",
+    "generator-feathers": "4.3.0",
+    "@feathersjs/tools": "^0.2.2",
     "commander": "^5.1.0",
     "generator-feathers-plugin": "1.0.1",
     "semver": "^7.3.2",
@@ -59,7 +59,7 @@
     "yeoman-environment": "^2.10.3"
   },
   "devDependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mocha": "^8.0.1",
     "npm-check-updates": "^7.0.1",
     "semistandard": "^14.2.2"
