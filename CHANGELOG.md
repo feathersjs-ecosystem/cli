@@ -1,5 +1,23 @@
 # Change Log
 
+## [v4.4.0](https://github.com/feathersjs/cli/tree/v4.4.0) (2020-07-08)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.3.0...v4.4.0)
+
+**Closed issues:**
+
+- Build tools in typescript throw error in Node 14.1 [\#227](https://github.com/feathersjs/cli/issues/227)
+- Deprecation warnings [\#222](https://github.com/feathersjs/cli/issues/222)
+- Trouble install on macOS after zsh update [\#211](https://github.com/feathersjs/cli/issues/211)
+- default.json contains wrong entity/service if a different user model is used during app generation [\#199](https://github.com/feathersjs/cli/issues/199)
+
+**Merged pull requests:**
+
+- Update to latest generator-feathers and @feathersjs/tools [\#230](https://github.com/feathersjs/cli/pull/230) ([daffl](https://github.com/daffl))
+- Update all dependencies [\#229](https://github.com/feathersjs/cli/pull/229) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Update all dependencies [\#228](https://github.com/feathersjs/cli/pull/228) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Update all dependencies [\#226](https://github.com/feathersjs/cli/pull/226) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Add GitHub actions for CI and auto-updates [\#223](https://github.com/feathersjs/cli/pull/223) ([daffl](https://github.com/daffl))
+
 ## [v4.3.0](https://github.com/feathersjs/cli/tree/v4.3.0) (2020-02-13)
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.2.5...v4.3.0)
 
