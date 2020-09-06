@@ -61,7 +61,7 @@
   "devDependencies": {
     "lodash": "^4.17.19",
     "mocha": "^8.0.1",
-    "npm-check-updates": "^7.0.1",
+    "npm-check-updates": "^8.1.0",
     "semistandard": "^14.2.2"
   }
 }
