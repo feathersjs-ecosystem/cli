@@ -55,7 +55,7 @@
     "commander": "^6.1.0",
     "generator-feathers-plugin": "1.0.1",
     "semver": "^7.3.2",
-    "update-notifier": "^4.1.0",
+    "update-notifier": "^5.0.0",
     "yeoman-environment": "^2.10.3"
   },
   "devDependencies": {
