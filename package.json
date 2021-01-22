@@ -50,7 +50,7 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "generator-feathers": "4.3.3",
+    "generator-feathers": "4.4.0",
     "@feathersjs/tools": "^0.2.2",
     "commander": "^6.2.1",
     "generator-feathers-plugin": "1.0.1",
@@ -61,7 +61,7 @@
   "devDependencies": {
     "lodash": "^4.17.20",
     "mocha": "^8.2.1",
-    "npm-check-updates": "^10.2.5",
+    "npm-check-updates": "^11.0.2",
     "semistandard": "^16.0.0"
   }
 }
