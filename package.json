@@ -50,18 +50,18 @@
   },
   "preferGlobal": true,
   "dependencies": {
+    "@feathersjs/tools": "^0.2.3",
+    "commander": "^7.1.0",
     "generator-feathers": "4.4.0",
-    "@feathersjs/tools": "^0.2.2",
-    "commander": "^7.0.0",
     "generator-feathers-plugin": "1.0.1",
     "semver": "^7.3.4",
-    "update-notifier": "^5.0.1",
+    "update-notifier": "^5.1.0",
     "yeoman-environment": "^2.10.3"
   },
   "devDependencies": {
-    "lodash": "^4.17.20",
-    "mocha": "^8.2.1",
-    "npm-check-updates": "^11.0.2",
+    "lodash": "^4.17.21",
+    "mocha": "^8.3.2",
+    "npm-check-updates": "^11.3.0",
     "semistandard": "^16.0.0"
   }
 }
