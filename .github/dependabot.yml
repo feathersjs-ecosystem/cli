@@ -1,0 +1,35 @@
+version: 2
+registries:
+  npm-registry-registry-npmjs-org:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    token: "${{secrets.NPM_REGISTRY_REGISTRY_NPMJS_ORG_TOKEN}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: npm-check-updates
+    versions:
+    - 11.1.9
+  - dependency-name: mocha
+    versions:
+    - 8.3.0
+  - dependency-name: yeoman-environment
+    versions:
+    - 3.0.1
+  - dependency-name: commander
+    versions:
+    - 7.1.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.21
+  - dependency-name: "@feathersjs/tools"
+    versions:
+    - 0.2.3
+  registries:
+  - npm-registry-registry-npmjs-org
