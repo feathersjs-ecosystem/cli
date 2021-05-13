@@ -37,7 +37,7 @@
     "mocha": "mocha --recursive test/",
     "test": "npm run lint && npm run mocha",
     "lint": "semistandard --fix",
-    "update-dependencies": "ncu -u"
+    "update-dependencies": "ncu -u -x yeoman-environment"
   },
   "directories": {
     "lib": "lib"
