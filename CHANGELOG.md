@@ -1,8 +1,16 @@
 # Changelog
 
-## [Unreleased](https://github.com/feathersjs/cli/tree/HEAD)
+## [v4.6.1](https://github.com/feathersjs/cli/tree/v4.6.1) (2021-11-24)
 
-[Full Changelog](https://github.com/feathersjs/cli/compare/v4.6.0...HEAD)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.6.0...v4.6.1)
+
+## [v4.6.0](https://github.com/feathersjs/cli/tree/v4.6.0) (2021-11-23)
+
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.5.0...v4.6.0)
+
+**Closed issues:**
+
+- CLI service generation crash when the name start by a number [\#279](https://github.com/feathersjs/cli/issues/279)
 
 **Merged pull requests:**
 
@@ -15,14 +23,6 @@
 - Bump commander from 6.2.1 to 7.0.0 [\#261](https://github.com/feathersjs/cli/pull/261) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump update-notifier from 5.0.1 to 5.1.0 [\#259](https://github.com/feathersjs/cli/pull/259) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump npm-check-updates from 11.0.2 to 11.1.1 [\#258](https://github.com/feathersjs/cli/pull/258) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
-
-## [v4.6.0](https://github.com/feathersjs/cli/tree/v4.6.0) (2021-11-23)
-
-[Full Changelog](https://github.com/feathersjs/cli/compare/v4.5.0...v4.6.0)
-
-**Closed issues:**
-
-- CLI service generation crash when the name start by a number [\#279](https://github.com/feathersjs/cli/issues/279)
 
 ## [v4.5.0](https://github.com/feathersjs/cli/tree/v4.5.0) (2021-01-22)
 
