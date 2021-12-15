@@ -1,5 +1,22 @@
 # Changelog
 
+## [Unreleased](https://github.com/feathersjs/cli/tree/HEAD)
+
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.6.2...HEAD)
+
+**Merged pull requests:**
+
+- chore\(dependencies\): Update all dependencies [\#283](https://github.com/feathersjs/cli/pull/283) ([daffl](https://github.com/daffl))
+- chore\(dependencies\): Update all dependencies [\#282](https://github.com/feathersjs/cli/pull/282) ([daffl](https://github.com/daffl))
+
+## [v4.6.2](https://github.com/feathersjs/cli/tree/v4.6.2) (2021-12-15)
+
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.6.1...v4.6.2)
+
+**Closed issues:**
+
+- Exception when generating hooks [\#234](https://github.com/feathersjs/cli/issues/234)
+
 ## [v4.6.1](https://github.com/feathersjs/cli/tree/v4.6.1) (2021-11-24)
 
 [Full Changelog](https://github.com/feathersjs/cli/compare/v4.6.0...v4.6.1)
