@@ -2,11 +2,16 @@
 
 ## [Unreleased](https://github.com/feathersjs/cli/tree/HEAD)
 
-[Full Changelog](https://github.com/feathersjs/cli/compare/v4.7.0...HEAD)
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.8.0...HEAD)
 
 **Merged pull requests:**
 
-- chore\(dependencies\): Update all dependencies [\#284](https://github.com/feathersjs/cli/pull/284) ([daffl](https://github.com/daffl))
+- chore\(dependencies\): Update all dependencies [\#291](https://github.com/feathersjs/cli/pull/291) ([daffl](https://github.com/daffl))
+- chore\(dependencies\): Update all dependencies [\#290](https://github.com/feathersjs/cli/pull/290) ([daffl](https://github.com/daffl))
+
+## [v4.8.0](https://github.com/feathersjs/cli/tree/v4.8.0) (2022-06-13)
+
+[Full Changelog](https://github.com/feathersjs/cli/compare/v4.7.0...v4.8.0)
 
 ## [v4.7.0](https://github.com/feathersjs/cli/tree/v4.7.0) (2022-01-10)
 
@@ -15,6 +20,10 @@
 **Closed issues:**
 
 - Feathers CLI command producing strange output. [\#285](https://github.com/feathersjs/cli/issues/285)
+
+**Merged pull requests:**
+
+- chore\(dependencies\): Update all dependencies [\#284](https://github.com/feathersjs/cli/pull/284) ([daffl](https://github.com/daffl))
 
 ## [v4.6.2](https://github.com/feathersjs/cli/tree/v4.6.2) (2021-12-15)
 
