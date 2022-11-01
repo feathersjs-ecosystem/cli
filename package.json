@@ -51,17 +51,17 @@
   "preferGlobal": true,
   "dependencies": {
     "@feathersjs/tools": "^0.2.3",
-    "commander": "^9.3.0",
-    "generator-feathers": "^4.2.0",
-    "generator-feathers-plugin": "^0.3.1",
-    "semver": "^7.3.7",
-    "update-notifier": "^5.1.0",
+    "commander": "^9.4.1",
+    "generator-feathers": "^4.7.0",
+    "generator-feathers-plugin": "^1.0.1",
+    "semver": "^7.3.8",
+    "update-notifier": "^6.0.2",
     "yeoman-environment": "^3.9.1"
   },
   "devDependencies": {
     "lodash": "^4.17.21",
-    "mocha": "^10.0.0",
-    "npm-check-updates": "^13.1.5",
+    "mocha": "^10.1.0",
+    "npm-check-updates": "^16.3.16",
     "semistandard": "^16.0.1"
   }
 }
