@@ -1,5 +1,7 @@
 # Feathers CLI
 
+> __Important:__ The Feathers CLI has been moved to the [cli package](https://github.com/feathersjs/feathers/tree/dove/packages/cli) in [feathersjs/feathers](https://github.com/feathersjs/feathers )
+
 [![CI](https://github.com/feathersjs/cli/workflows/CI/badge.svg)](https://github.com/feathersjs/cli/actions?query=workflow%3ACI) ![Dependency status](https://david-dm.org/feathersjs/cli.svg)
 
 The command line interface for Feathers applications
